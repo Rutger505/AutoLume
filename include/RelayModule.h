@@ -7,6 +7,8 @@ private:
     int pin;
 public:
     RelayModule(int pin);
+
     void on() override;
+
     void off() override;
 };
