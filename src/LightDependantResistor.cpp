@@ -1,11 +1,11 @@
-#pragma once
-
+#include <stdexcept>
 #include "LuxMeter.h"
+#include "LightDependantResistor.h"
 
-class LightDependantResistor : public LuxMeter {
-private:
-    int pin;
-public:
-    LightDependantResistor(int pin);
-    double measureLux() override;
-};
+LightDependantResistor::LightDependantResistor(int pin) {
+    throw std::runtime_error("Not implemented");
+}
+
+double LightDependantResistor::measureLux() {
+    throw std::runtime_error("Not implemented");
+}

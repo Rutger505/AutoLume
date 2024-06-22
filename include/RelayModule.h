@@ -6,7 +6,9 @@ class RelayModule : public LightSwitch {
 private:
     int pin;
 public:
-    RelayModule(int pin);
+    explicit RelayModule(int pin);
+
     void on() override;
+
     void off() override;
 };

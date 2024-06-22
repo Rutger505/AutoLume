@@ -1,8 +1,9 @@
+#include <stdexcept>
 #include "Webserver.h"
 
-Webserver::Webserver(const std::string& ip, int port)
-        : ip(ip), port(port), lastHeartBeat(std::time(nullptr)) {}
+Webserver::Webserver(const std::string &ip, int port)
+        : ip(ip), port(port) {}
 
 void Webserver::startWebserver() {
-    // Implement webserver logic
+    throw std::runtime_error("Not implemented");
 }

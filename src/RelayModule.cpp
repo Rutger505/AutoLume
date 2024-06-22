@@ -1,11 +1,12 @@
+#include <stdexcept>
 #include "RelayModule.h"
 
 RelayModule::RelayModule(int pin) : pin(pin) {}
 
 void RelayModule::on() {
-    // Implement turning on the relay
+    throw std::runtime_error("Not implemented");
 }
 
 void RelayModule::off() {
-    // Implement turning off the relay
+    throw std::runtime_error("Not implemented");
 }
