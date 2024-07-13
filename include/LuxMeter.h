@@ -2,6 +2,7 @@
 
 class LuxMeter {
 public:
-    virtual ~LuxMeter() {}
+    virtual ~LuxMeter() = default;
+
     virtual double measureLux() = 0;
 };

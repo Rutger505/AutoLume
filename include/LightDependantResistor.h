@@ -4,8 +4,13 @@
 
 class LightDependantResistor : public LuxMeter {
 private:
-    int pin;
+    uint8_t pin;
+    double operatingVoltage;
+    uint16_t adcResolution;
+    uint32_t pullUpResistor;
 public:
-    LightDependantResistor(int pin);
+    explicit LightDependantResistor(uint8_t pin, double operatingVoltage, uint16_t adcResolution,
+                                    uint32_t pullUpResistor);
+
     double measureLux() override;
 };
