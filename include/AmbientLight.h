@@ -1,12 +1,14 @@
 #pragma once
 
+#include <cstdint>
 #include "LuxMeter.h"
 
 class AmbientLight {
 private:
-    LuxMeter& luxMeter;
-    int enoughLuxThreshold;
+    LuxMeter &luxMeter;
+    uint16_t enoughLuxThreshold;
 public:
-    AmbientLight(LuxMeter& luxMeter, int enoughLuxThreshold);
+    AmbientLight(LuxMeter &luxMeter, uint16_t enoughLuxThreshold);
+
     bool enoughLux();
 };

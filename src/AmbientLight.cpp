@@ -1,8 +1,8 @@
 #include "AmbientLight.h"
 
-AmbientLight::AmbientLight(LuxMeter& luxMeter, int enoughLuxThreshold)
+AmbientLight::AmbientLight(LuxMeter &luxMeter, uint16_t enoughLuxThreshold)
         : luxMeter(luxMeter), enoughLuxThreshold(enoughLuxThreshold) {}
 
 bool AmbientLight::enoughLux() {
-    return luxMeter.measureLux() >= enoughLuxThreshold;
+    return luxMeter.measureLux() > enoughLuxThreshold;
 }
